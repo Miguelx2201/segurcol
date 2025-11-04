@@ -3,6 +3,7 @@ package co.edu.uniquindio.poo.segurcol.model;
 public class PatrullajeMovil extends Servicio{
     private int cantidadRutas;
     private double kmRecorridos;
+    private final double precioPorKmRecorrido = 10000;
 
     public PatrullajeMovil(String codigo, String cliente, double tarifaMensual, EstadoServicio estado, int cantidadRutas, double kmRecorridos) {
         super(codigo, cliente, tarifaMensual, estado);
@@ -24,5 +25,10 @@ public class PatrullajeMovil extends Servicio{
 
     public void setCantidadRutas(int cantidadRutas) {
         this.cantidadRutas = cantidadRutas;
+    }
+
+    @Override
+    public double calcularCosto() {
+        return precioPorKmRecorrido*kmRecorridos;
     }
 }

@@ -17,4 +17,9 @@ public class Operador extends Personal{
     public void setZonas(List<String> zonas) {
         this.zonas = zonas;
     }
+
+    @Override
+    public double calcularSalarioTotal() {
+        return getSalarioBase();
+    }
 }

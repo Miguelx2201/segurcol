@@ -27,5 +27,13 @@ public class CustodiaFija extends Servicio{
     public void setVigilantes(List<Vigilante> vigilantes) {
         this.vigilantes = vigilantes;
     }
-    
+
+    @Override
+    public double calcularCosto() {
+        double costo = 0;
+        for(Vigilante v: vigilantes) {
+            costo += v.getSalarioBase();
+        }
+        return costo;
+    }
 }

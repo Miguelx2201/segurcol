@@ -45,4 +45,9 @@ public class Vigilante extends Personal{
     public void setCustodiaFija(CustodiaFija custodiaFija) {
         this.custodiaFija = custodiaFija;
     }
+
+    @Override
+    public double calcularSalarioTotal() {
+        return getSalarioBase();
+    }
 }

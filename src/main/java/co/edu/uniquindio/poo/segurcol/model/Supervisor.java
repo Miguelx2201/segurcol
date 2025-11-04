@@ -28,4 +28,9 @@ public class Supervisor extends Personal{
     public void setVigilantesEncargados(List<Vigilante> vigilantesEncargados) {
         this.vigilantesEncargados = vigilantesEncargados;
     }
+
+    @Override
+    public double calcularSalarioTotal() {
+        return getSalarioBase()+getBono();
+    }
 }
