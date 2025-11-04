@@ -66,16 +66,5 @@ public class EmpresaSeguridad {
         return total;
     }
 
-    public void registrarNovedad(RegistroNovedad novedad) {
-        novedades.add(novedad);
-    }
-    public List<RegistroNovedad> obtenerNovedades(LocalDate desde, LocalDate hasta) {
-        List<RegistroNovedad> resultado = new ArrayList<>();
-        for (RegistroNovedad aux : novedades) {
-            if(aux.fecha().isAfter(desde) && aux.fecha().isBefore(hasta)){
-                resultado.add(aux);
-            }
-        }
-        return resultado;
-    }
+
 }
