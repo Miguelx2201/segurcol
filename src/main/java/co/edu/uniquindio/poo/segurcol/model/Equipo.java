@@ -1,0 +1,47 @@
+package co.edu.uniquindio.poo.segurcol.model;
+
+public class Equipo {
+    private String codigo;
+    private double valor;
+    private TipoEquipo tipo;
+    private EstadoEquipo estado;
+
+    public Equipo(String codigo, double valor, TipoEquipo tipo, EstadoEquipo estado) {
+        this.codigo = codigo;
+        this.valor = valor;
+        this.tipo = tipo;
+        this.estado = estado;
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    public TipoEquipo getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(TipoEquipo tipo) {
+        this.tipo = tipo;
+    }
+
+    public EstadoEquipo getEstado() {
+        return estado;
+    }
+
+    public void setEstado(EstadoEquipo estado) {
+        this.estado = estado;
+    }
+}
