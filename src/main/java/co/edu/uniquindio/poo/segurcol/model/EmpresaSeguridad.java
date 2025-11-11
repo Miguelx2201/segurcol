@@ -110,5 +110,6 @@ public class EmpresaSeguridad {
         for(Personal p: listaPersonal){
             total+=p.calcularSalarioTotal();
         }
+        return total;
     }
 }
