@@ -1,16 +1,29 @@
 package co.edu.uniquindio.poo.segurcol.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class Servicio {
     private String codigo;
     private String cliente;
     private double tarifaMensual;
     private EstadoServicio estado;
+    private List<Personal> listaPersonalAsignado;
 
     public Servicio(String codigo, String cliente, double tarifaMensual, EstadoServicio estado) {
         this.codigo = codigo;
         this.cliente = cliente;
         this.tarifaMensual = tarifaMensual;
         this.estado = estado;
+        this.listaPersonalAsignado = new ArrayList<>();
+    }
+
+    public List<Personal> getListaPersonalAsignado() {
+        return listaPersonalAsignado;
+    }
+
+    public void setListaPersonalAsignado(List<Personal> listaPersonalAsignado) {
+        this.listaPersonalAsignado = listaPersonalAsignado;
     }
 
     public String getCodigo() {

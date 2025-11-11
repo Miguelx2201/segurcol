@@ -9,6 +9,7 @@ public abstract class Personal {
     private double salarioBase;
     private boolean turnoDia;
     private List<Equipo> listaEquipo;
+    private Servicio servicioAsignado;
 
     public Personal(String nombre, String documento, double salarioBase, boolean turnoDia) {
         this.nombre = nombre;
@@ -16,6 +17,14 @@ public abstract class Personal {
         this.salarioBase = salarioBase;
         this.turnoDia = turnoDia;
         this.listaEquipo = new ArrayList<>();
+    }
+
+    public Servicio getServicioAsignado() {
+        return servicioAsignado;
+    }
+
+    public void setServicioAsignado(Servicio servicioAsignado) {
+        this.servicioAsignado = servicioAsignado;
     }
 
     public String getNombre() {
@@ -70,5 +79,8 @@ public abstract class Personal {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+    }
+    public double calcularValorEquipoAsignado() {
+        return listaEquipo.stream().mapToDouble(Equipo::getValor).sum();
     }
 }

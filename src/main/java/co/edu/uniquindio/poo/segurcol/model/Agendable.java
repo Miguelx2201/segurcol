@@ -1,6 +1,7 @@
 package co.edu.uniquindio.poo.segurcol.model;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public interface Agendable {
     void programar(LocalDate fecha, String descripcion);
